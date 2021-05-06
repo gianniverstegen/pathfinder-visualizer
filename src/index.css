@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bolder;
+  color: rgb(202, 202, 202);
+  font-size: 14px;
+}
+
+body {
+  min-width: 1100px;
+}
+
+button {
+  margin-right: 5px;
+  margin-top: 4.5px;
+  vertical-align: middle;
+  left: 0;
+  width: 11%;
+  height: 80%;
+  background-color: #2f2fa2;
+  border: none;
+  outline: none;
+  -moz-outline: none;
+}
+
+#pop-up1 {
+  z-index: 15;
+}
+
+#pop-up2 {
+  z-index: 14;
+}
+
+#pop-up3 {
+  z-index: 13;
+}
+
+#pop-up4 {
+  z-index: 12;
+}
+
+#pop-up5 {
+  z-index: 11;
+}
+
+#pop-up9 {
+  z-index: 10;
+}
+
+#visualizeButton {
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  background-color: #f64c72;
+  border-radius: 4px;
+  text-align: center;
+  color: #242582;
+  font-size: 10px;
+  margin-bottom: 1px;
+}
+
+.headerButtonPopup {
+  text-align: center;
+  display: inline-block;
+  background-color: #2f2fa2;
+  margin-top: -1px;
+  font-size: 10px;
+  height: 19px;
+  line-height: 18px;
+  vertical-align: middle;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  width: 30%;
+  background-color: #242582;
+  height: 20%;
+  min-height: 200px;
+  min-width: 300px;
+  text-align: center;
+  /* opacity: ; */
+  border-radius: 10px;
+  border: solid 3px #4f4fd6;
+}
+
+.pop-up > #firstButton {
+  position: absolute;
+  width: 30%;
+  top: 80%;
+  height: 25px;
+  left: 5%;
+  border-radius: 8px;
+}
+
+.pop-up > #secondButton {
+  position: absolute;
+  width: 30%;
+  top: 80%;
+  height: 25px;
+  left: 65%;
+  border-radius: 8px;
+}
+
+.pop-up > h2 {
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  color: #dd5afd;
+  top: 10%;
+  width: 70%;
+  left: 15%;
+  text-align: center;
+}
+
+#popupTextFirstSlide {
+  position: absolute;
+  display: inline-block;
+  width: 65%;
+  left: 17.5%;
+  top: 38%;
+}
+
+#popupText {
+  position: absolute;
+  display: inline-block;
+  width: 95%;
+  left: 2.5%;
+  top: 25%;
+}
+
+/* Header things */
+header {
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: #2f2fa2;
+  width: 100%;
+  height: 50px;
+}
+
+header > ul.algorithm_list {
+  padding: 0%;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button:active {
+  color: #242582;
+}
+
+button.logo {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 20%;
+  color: #f64c72;
+}
+
+button.visualize {
+  border-radius: 8px;
+  color: #242582;
+  width: 15%;
+  margin-right: 30px;
+  background-color: #f64c72;
+  /* animation-name: visualizeButtonAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; */
+}
+
+#header-selector {
+  position: relative;
+}
+
+.header-dropdown {
+  display: none;
+  position: absolute;
+  padding-top: 21px;
+  width: 180px;
+  left: 0;
+  z-index: 3;
+}
+
+.header-dropdown div {
+  box-sizing: border-box;
+  width: 180px;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  background-color: #2f2fa2;
+  border-radius: 6px;
+}
+
+#header-selector:hover {
+  background-color: #3a3dff;
+  border-radius: 8px;
+}
+
+#header-selector:hover .header-dropdown {
+  display: block;
+}
+
+#resetAlgorithmButton {
+  position: relative;
+  margin-left: 13%;
+}
+
+/* Legend */
+.legendPopups {
+  position: absolute;
+  background-color: #242582;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 60px;
+  vertical-align: middle;
+  font-size: 16px;
+  z-index: 2;
+  display: none;
+  cursor: default;
+}
+
+.legendPopups.shortAnimation {
+  display: inline-block;
+  animation-name: legendPopupAnimation;
+  animation-duration: 3s;
+}
+
+.legendPopups.longAnimation {
+  display: inline-block;
+  animation-name: legendPopupAnimation;
+  animation-duration: 6s;
+}
+
+.legendPopups.noFadeOut {
+  display: inline-block;
+  animation-name: legendPopupNoFadeOut;
+  animation-duration: 3s;
+}
+
+@keyframes legendPopupAnimation {
+  0% {
+    opacity: 0%;
+  }
+  7% {
+    opacity: 100%;
+  }
+  93% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes legendPopupNoFadeOut {
+  0% {
+    opacity: 0%;
+  }
+  7% {
+    opacity: 100%;
+  }
+}
+
+div.legend {
+  display: flex;
+  height: 40px;
+  background-color: #242582;
+}
+
+div.legend > button {
+  top: 50%;
+  line-height: 49px;
+  flex: 1;
+  text-align: center;
+  background-color: #242582;
+  border: none;
+  outline: none;
+  -moz-outline: none;
+  z-index: 1;
+}
+
+div.legend > .selected {
+  color: #dd5afd;
+}
+
+/* Node container */
+div.node_section {
+  width: 100%;
+  min-width: 1150px;
+  position: fixed;
+  height: 100%;
+  min-height: 600px;
+  text-align: center;
+  /* padding-top: 20px; */
+  background-color: #242582;
+}
+
+div.node_container {
+  top: 35%;
+  transform: translate(0, -40%);
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  position: relative;
+}
+
+.no_animation {
+  border: solid 2px #242582;
+}
+
+div.node_row {
+  height: 27px;
+}
+
+/* Node */
+
+.node {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+}
+
+.node-isHole {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+}
+
+.node-isStart {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: #0004ff;
+  animation-name: small-animation;
+  animation-duration: 1s;
+}
+
+.node-isEnd {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: #99738e;
+  animation-name: small-animation;
+  animation-duration: 1s;
+}
+
+.node-isWall {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: rgb(31, 31, 31);
+  animation-name: wall-animation;
+  animation-duration: 0.5s;
+}
+
+.node-isStopover {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: #e2a0d0;
+}
+
+[weight="10"] {
+  background-image: url("./images/pixil-frame-0.png");
+  animation-name: small-animation;
+  animation-duration: 0.5s;
+}
+
+.node-isVisited {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: #3c3ca3;
+  animation-name: visited-animation;
+  animation-duration: 1.3s;
+}
+
+.node-isVisitedNoAn {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+
+  border: solid 0.2px #9e9e9e;
+  display: inline-block;
+  background-color: #3c3ca3;
+}
+
+.node-isPath {
+  text-align: center;
+  line-height: 25px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border: solid 0.5px #9e9e9e;
+  display: inline-block;
+  background-color: #f64c72;
+  animation-name: path-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes visualizeButtonAnimation {
+  50% {
+    background-color: #242582;
+    color: #f64c72;
+  }
+}
+
+@keyframes legendPopupAnimation {
+  0% {
+    opacity: 0%;
+  }
+  7% {
+    opacity: 100%;
+  }
+  93% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes legendPopupNoFadeOut {
+  0% {
+    opacity: 0%;
+  }
+  7% {
+    opacity: 100%;
+  }
+}
+
+@keyframes wall-animation {
+  0% {
+    border-radius: 3px;
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+    border-radius: 6px;
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+  }
+}
+
+@keyframes small-animation {
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes visited-animation {
+  0% {
+    border-radius: 2px;
+  }
+  10% {
+    /* The "queue" block visited colour change*/
+    transform: scale(1.12);
+    border-radius: 3px;
+    background-color: #4f4fd6;
+  }
+  18% {
+    background-color: #dd5afd;
+  }
+  90% {
+    transform: scale(1);
+    background-color: #3c3ca3;
+  }
+  100% {
+    border-radius: 2px;
+  }
+}
+
+@keyframes path-animation {
+  0% {
+    border-radius: 3px;
+  }
+  25% {
+    transform: scale(1.07);
+    background-color: #f64c72;
+  }
+  50% {
+    transform: scale(1.11);
+    border-radius: 6px;
+    background-color: #db4b6a;
+  }
+  75% {
+    transform: scale(1.07);
+    background-color: #f64c72;
+  }
+  100% {
+  }
+}
+
+/* Information div */
+.informationDiv {
+  background-color: #242582;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  text-align: center;
+  line-height: 70px;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/* GREY: 99738e
+DARKERGREY: 553D67
+DARKERPURPLE: 242582
+PURPLE: 2f2fa2
+ORANGE: f64c72 */
