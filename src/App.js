@@ -300,6 +300,9 @@ function App() {
       newGridendNode,
       "noanimation"
     );
+    if (dragAndSeeGrid === "error3") {
+      return;
+    }
     legendPopup(
       "displayResults",
       dragAndSeeGrid[0].length,
