@@ -1,3 +1,5 @@
+import React from "react";
+
 const Legend = ({ legendHandler }) => {
   const legendSelectorAnimation = (id) => {
     document.getElementById("startSelector").className = "notSelected";

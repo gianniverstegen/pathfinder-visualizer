@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Legend from "./components/Legend";
 import Node_container from "./components/Node_container";
-import Popup from "./components/Popup";
 import dijkstra from "./Algorithms/Dijkstra";
 import astar from "./Algorithms/astar";
 import lightastar from "./Algorithms/lightastar";
